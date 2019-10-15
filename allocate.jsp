@@ -16,7 +16,7 @@
 <body>
 <%
 		String status = request.getParameter("status");
-		if (status == null) {
+		if(status == null) {
 	%>
 	<form action="AllocateServlet" method="Post">
 	
@@ -68,7 +68,6 @@
 				<% 
 				CabDaoimpl cab = new CabDaoimpl();
 				List<String> cab_no =cab.findById(0);
-				int x = 0;
 				for(int j=0;j<cab_no.size();j++)
 				{
 				%>
@@ -88,8 +87,7 @@
 		</tr>
 		<%
 }
-		}
-	
+		}	
 %>
 	</table>
 	</form>
